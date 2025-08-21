@@ -1,0 +1,6 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+ISSO AQUI DEIXA AS CHAVES ESTRANGEIRAS DESATIVAS
+
+
+O comando SET FOREIGN_KEY_CHECKS = 0; desativa as restrições de chave estrangeira, permitindo inserir informações em quaisquer tabelas.
