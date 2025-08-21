@@ -1,0 +1,28 @@
+ MySQL é um dos sistemas de gerenciamento de banco de dados mais populares e apropriados para ter um modelo relacional implementado. Além de oferecer gerenciamento de acesso à usuários, a manipulação e a organização dos dados.
+
+
+CREATE SCHEMA CLUBE_DO_LIVRO;
+
+
+
+criando a tabelinha no nosso banco de dados 
+
+
+CREATE TABLE LIVROS (
+    ID_LIVRO INT NOT NULL,
+    NOME_LIVRO VARCHAR(100) NOT NULL,
+    AUTORIA VARCHAR(100) NOT NULL,
+    EDITORA VARCHAR(100) NOT NULL,
+    CATEGORIA VARCHAR(100) NOT NULL,
+    PREÇO DECIMAL(5,2) NOT NULL,  
+ PRIMARY KEY (ID_LIVRO)
+);
+
+ALTERANDO A TABELA E ADICIONANDO CHAVE ESTRANGEIRA NELA 
+
+
+ALTER TABLE estoque ADD CONSTRAINT CE_ESTOQUE_LIVROS
+FOREIGN KEY (id_livro)
+REFERENCES livros(id_livro)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
