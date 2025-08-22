@@ -1,0 +1,13 @@
+left join = traz informações da primeira tabela do join a tabela que vem a esquerda
+right join = traz informações da primeira tabela do join a tabela que vem a direita
+
+
+#Será que todos os livros da nossa base de dados foram vendiso
+
+SELECT
+VENDAS.ID_LIVRO,
+LIVROS.NOME, LIBRO, VENDAS.QTD_VENDIDA
+FROM LIVROS LEFT JOIN VENDAS
+ON LIVROS.ID_LIVRO = VENDAS.ID_LIVRO
+WHERE VENDAS.QTD_VENDIDA IS NULL;
+
